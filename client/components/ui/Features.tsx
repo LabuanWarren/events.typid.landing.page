@@ -119,6 +119,7 @@ export const Features = () => {
               isActive={activeCardIndex === index}
               isStacked={activeCardIndex > index}
               isNext={activeCardIndex + 1 === index}
+              stackLevel={activeCardIndex > index ? (activeCardIndex - index) : 0}
             >
               <FeatureCard 
                 badge={card.badge}
@@ -237,6 +238,7 @@ const CardContainer = styled.div<{
   isActive: boolean;
   isStacked: boolean;
   isNext: boolean;
+  stackLevel: number; // how many cards under the active one
 }>`
   display: flex;
   flex-direction: column;
@@ -252,8 +254,11 @@ const CardContainer = styled.div<{
   transform-origin: top center;
   will-change: transform;
   transform: ${props => {
-    if (props.isActive) return 'scale(0.9)';
-    if (props.isStacked) return `translateY(${props.delay * -40}px) scale(0.85)`;
+    if (props.isActive) return 'scale(1)';
+    if (props.isStacked) {
+      const step = 2; // uniform vertical spacing per level (px)
+      return `translateY(${-props.stackLevel * step}px) scale(0.95)`;
+    }
     if (props.isNext) return 'translateY(10px)';
     return 'none';
   }};

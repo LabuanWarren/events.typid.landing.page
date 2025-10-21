@@ -154,6 +154,7 @@ const LinkIcon = styled.div`
 const HeroFrame = styled.div`
   display: flex;
   position: relative;
+  
   height: 696px;
   width: 696px;
   overflow: visible;
@@ -161,7 +162,7 @@ const HeroFrame = styled.div`
   img:first-child {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     height: 508px;
     width: auto;
     max-width: 723px;
@@ -171,6 +172,7 @@ const HeroFrame = styled.div`
   
   img:last-child {
     position: absolute;
+    
     bottom: 0;
     left: 0;
     height: 286px;
