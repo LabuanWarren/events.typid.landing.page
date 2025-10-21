@@ -42,6 +42,7 @@ const HeroHeader = styled.div`
 const HeroCard = styled.div`
   border-radius: 1.5rem;
   display: flex;
+  overflow: hidden;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
