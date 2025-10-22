@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -24,8 +25,8 @@ export const Footer = () => {
           <FooterRow>
             <CopyrightText>© 2025 Typid Events by Night Latte.</CopyrightText>
             <FooterPolicyLinks>
-              <PolicyLink>Privacy policy</PolicyLink>
-              <PolicyLink>Terms of service</PolicyLink>
+              <PolicyRouterLink to="/privacy">Privacy policy</PolicyRouterLink>
+              <PolicyRouterLink to="/terms">Terms of service</PolicyRouterLink>
             </FooterPolicyLinks>
           </FooterRow>
         </FooterCredits>
@@ -185,6 +186,22 @@ const PolicyLink = styled.a`
   cursor: pointer;
   transition: color 0.2s ease;
   
+  &:hover {
+    color: #0a7a94;
+  }
+`;
+
+const PolicyRouterLink = styled(Link)`
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 20px;
+  text-decoration: underline;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
   &:hover {
     color: #0a7a94;
   }
