@@ -45,13 +45,16 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({ badge, title, features
 
 const Card = styled.div`
   border-radius: 1.5rem;
+  border: 1px solid #dcdfe9;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   background-color: #ffffff;
-  box-shadow: 0 12px 16px -4px rgba(10, 13, 18, 0.08), 0 4px 6px -2px rgba(10, 13, 18, 0.03), 0 2px 2px -1px rgba(10, 13, 18, 0.04);
+  box-shadow: 0 12px 16px -4px rgba(26, 77, 164, 0.08), 0 4px 6px -2px rgba(3, 31, 81, 0.03), 0 2px 2px -1px rgba(0, 34, 93, 0.04);
   overflow: hidden;
+  max-width: 1280px;
+  width: 100%;
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -64,6 +67,8 @@ const Content = styled.div`
   align-items: flex-start;
   padding: 0rem 4.5rem;
   gap: 1.5rem;
+  flex: 1 1 0;
+  min-width: 0; /* allow content to wrap instead of forcing image to shrink */
   
   @media (max-width: 768px) {
     padding: 2rem;
@@ -195,12 +200,15 @@ const DividerLine = styled.div`
 `;
 
 const CardImage = styled.img`
-  height: 640px;
   width: 696px;
-  object-fit: cover;
-  max-width: 696px;
+  height: auto;
+  max-height: 640px;
+  object-fit: contain;
+  display: block;
+  flex: 0 0 696px; /* fixed column for uniform width */
   
   @media (max-width: 768px) {
+    flex: 0 0 auto;
     width: 100%;
     height: auto;
     max-height: 400px;

@@ -76,7 +76,7 @@ const Title = styled.h1`
   font-weight: 500;
   font-family: 'DM Sans', sans-serif;
   letter-spacing: -2%;
-  line-height: 90px;
+  line-height: 120%;
   color: #000000;
   
   @media (max-width: 768px) {

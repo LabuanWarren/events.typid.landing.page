@@ -136,14 +136,14 @@ export const Features = () => {
 };
 
 const FeaturesWrapper = styled.section`
-  border-radius: 5rem;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 7rem 4rem;
   gap: 5rem;
-  background-color: #0d0f1b;
+  background: linear-gradient( #011C25 0%, #00C1DB 100%);
   
   @media (max-width: 768px) {
     padding: 4rem 2rem;
@@ -248,7 +248,7 @@ const CardContainer = styled.div<{
   padding-top: ${props => 7.5 + props.delay * 1.25}rem;
   /* Keep all cards sticky at the same offset to avoid reflow jitter */
   position: sticky;
-  top: 100px;
+  top: 2px;
   /* Ensure later cards are always visually on top (last card highest) */
   z-index: ${props => 100 + props.delay};
   transform-origin: top center;
@@ -266,6 +266,6 @@ const CardContainer = styled.div<{
   
   @media (max-width: 768px) {
     padding-top: ${props => 3 + props.delay * 0.5}rem;
-    top: 50px;
+    top: 10px;
   }
 `;

@@ -26,7 +26,7 @@ export const FAQ = () => {
   const faqItems = [
     {
       question: 'What is Typid Events?',
-      answer: 'Typid Events is an all-in-one event management platform that lets you create, manage, and sell tickets ("Tyckets") for your events. You can track sales, manage attendees, create discount codes, and design your own event booth — all powered by Typid Pay.'
+      answer: 'Typid Events is an all-in-one event management platform that lets you create, manage, and sell Tyckets for your events. You can track sales, manage attendees, create discount codes, and design your own Tycket Booth — all powered by Typid Pay.'
     },
     {
       question: 'What is Typid Pay?',
@@ -37,8 +37,8 @@ export const FAQ = () => {
       answer: 'Creating an event is simple! Sign in to your Typid account, navigate to the Dashboard, click "Create Event," and follow the step-by-step process. You\'ll be able to add event details, create ticket tiers, customize your event page, and publish when you\'re ready.'
     },
     {
-      question: 'Can I customize my event page?',
-      answer: 'Absolutely! Typid Events offers extensive customization options for your event pages. You can add your own branding, colors, images, custom fields for attendees, and even design a unique ticket booth experience that matches your brand identity.'
+      question: 'Can I customize my Tycket Booth?',
+      answer: 'Absolutely! Typid Events offers extensive customization options for your Tycket Booth. You can add your own branding, colors, and images that matches your brand identity.'
     }
   ];
 
