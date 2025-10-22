@@ -4,33 +4,61 @@ import styled from 'styled-components';
 interface CTAButtonProps {
   label: string;
   href?: string;
+  icon?: string | React.ReactNode; // 👈 can be image URL or React component
+  hideIcon?: boolean;              // 👈 if true, no icon is shown
 }
 
-export const CTAButton: React.FC<CTAButtonProps> = ({ label, href = '#' }) => {
+export const CTAButton: React.FC<CTAButtonProps> = ({
+  label,
+  href = '#',
+  icon = '/arrow-right.svg',
+  hideIcon = false,
+}) => {
   return (
     <ButtonRoot href={href} aria-label={label}>
       <TextWrapper>
         <ButtonLabel>{label}</ButtonLabel>
       </TextWrapper>
-      <IconWrapper>
-        <img src="/arrow-right.svg" alt="Arrow" />
-      </IconWrapper>
+
+      {!hideIcon && (
+        <IconWrapper>
+          {typeof icon === 'string' ? (
+            <img src={icon} alt="Icon" />
+          ) : (
+            icon
+          )}
+        </IconWrapper>
+      )}
     </ButtonRoot>
   );
 };
 
-export const CTAButtonSmall: React.FC<CTAButtonProps> = ({ label, href = '#' }) => {
+export const CTAButtonSmall: React.FC<CTAButtonProps> = ({
+  label,
+  href = '#',
+  icon = '/arrow-right.svg',
+  hideIcon = false,
+}) => {
   return (
     <ButtonRootSmall href={href} aria-label={label}>
       <TextWrapperSmall>
         <ButtonLabel>{label}</ButtonLabel>
       </TextWrapperSmall>
-      <IconWrapperSmall>
-        <img src="/arrow-right.svg" alt="Arrow" />
-      </IconWrapperSmall>
+
+      {!hideIcon && (
+        <IconWrapperSmall>
+          {typeof icon === 'string' ? (
+            <img src={icon} alt="Icon" />
+          ) : (
+            icon
+          )}
+        </IconWrapperSmall>
+      )}
     </ButtonRootSmall>
   );
 };
+
+// ===== Styles =====
 
 const ButtonRoot = styled.a`
   border-radius: 0.75rem;
@@ -85,15 +113,13 @@ const ButtonLabel = styled.span`
 
 const IconWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.625rem;
 
   img {
     height: 24px;
     width: 24px;
-    filter: none;
   }
 `;
 
@@ -107,5 +133,3 @@ const IconWrapperSmall = styled(IconWrapper)`
     width: 20px;
   }
 `;
-
-

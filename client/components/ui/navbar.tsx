@@ -31,7 +31,7 @@ export const Navbar = () => {
           <LoginButton>
             Login
           </LoginButton>
-          <CTAButtonSmall label="Sign up" />
+          <CTAButtonSmall label="Sign up" hideIcon />
         </NavActions>
       </NavbarContainer>
     </NavbarWrapper>
