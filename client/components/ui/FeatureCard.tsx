@@ -198,6 +198,7 @@ const CardImage = styled.img`
   height: 640px;
   width: 696px;
   object-fit: cover;
+  max-width: 696px;
   
   @media (max-width: 768px) {
     width: 100%;

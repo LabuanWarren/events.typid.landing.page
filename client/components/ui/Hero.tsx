@@ -12,7 +12,7 @@ export const Hero = () => {
             <Subtitle>From setup to sales, Events by Typid gives you the power to create, manage, and customize every part of your event experience —  all in one dashboard.</Subtitle>
           </HeroContent>
           <HeroActions>
-            <CTAButton label="Sign up" />
+            <CTAButton label="Sign up for Free" />
           </HeroActions>
         </HeroColumn>
         <HeroFrame>
@@ -63,6 +63,7 @@ const HeroColumn = styled.div`
 
 const HeroContent = styled.div`
   display: flex;
+  max-width: 600px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -72,9 +73,10 @@ const HeroContent = styled.div`
 const Title = styled.h1`
   text-align: left;
   font-size: 72px;
+  font-weight: 500;
   font-family: 'DM Sans', sans-serif;
   letter-spacing: -2%;
-  line-height: 90%;
+  line-height: 90px;
   color: #000000;
   
   @media (max-width: 768px) {

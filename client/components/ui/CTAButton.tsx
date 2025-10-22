@@ -19,6 +19,19 @@ export const CTAButton: React.FC<CTAButtonProps> = ({ label, href = '#' }) => {
   );
 };
 
+export const CTAButtonSmall: React.FC<CTAButtonProps> = ({ label, href = '#' }) => {
+  return (
+    <ButtonRootSmall href={href} aria-label={label}>
+      <TextWrapperSmall>
+        <ButtonLabel>{label}</ButtonLabel>
+      </TextWrapperSmall>
+      <IconWrapperSmall>
+        <img src="/arrow-right.svg" alt="Arrow" />
+      </IconWrapperSmall>
+    </ButtonRootSmall>
+  );
+};
+
 const ButtonRoot = styled.a`
   border-radius: 0.75rem;
   display: flex;
@@ -45,6 +58,11 @@ const ButtonRoot = styled.a`
     transform: translateY(0);
     box-shadow: 0 4px 15px rgba(28, 221, 244, 0.25);
   }
+`;
+
+const ButtonRootSmall = styled(ButtonRoot)`
+  height: 46px;
+  padding: 0 1rem;
 `;
 
 const TextWrapper = styled.div`
@@ -76,6 +94,17 @@ const IconWrapper = styled.div`
     height: 24px;
     width: 24px;
     filter: none;
+  }
+`;
+
+const TextWrapperSmall = styled(TextWrapper)`
+  padding: 0.25rem 0;
+`;
+
+const IconWrapperSmall = styled(IconWrapper)`
+  img {
+    height: 20px;
+    width: 20px;
   }
 `;
 

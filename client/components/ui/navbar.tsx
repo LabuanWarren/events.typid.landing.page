@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CTAButtonSmall } from './CTAButton';
 
 export const Navbar = () => {
   return (
@@ -30,9 +31,7 @@ export const Navbar = () => {
           <LoginButton>
             Login
           </LoginButton>
-          <SignupButton>
-            Sign Up
-          </SignupButton>
+          <CTAButtonSmall label="Sign up" />
         </NavActions>
       </NavbarContainer>
     </NavbarWrapper>
@@ -154,23 +153,6 @@ const LoginButton = styled.button`
   
   &:hover {
     background-color: #f8f9fb;
-  }
-`;
-
-const SignupButton = styled.button`
-  border-radius: 0.5rem;
-  padding: 0.625rem 1.25rem;
-  background-color: #00C4FF;
-  border: none;
-  font-size: 16px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  color: #ffffff;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  
-  &:hover {
-    background-color: #00b3e6;
   }
 `;
 

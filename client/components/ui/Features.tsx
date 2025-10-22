@@ -180,7 +180,7 @@ const TaglineWrapper = styled.div`
 const Ellipse = styled.div`
   height: 12px;
   width: 12px;
-  background-color: #6366F1;
+  background-color: #00C1DB;
   border-radius: 50%;
 `;
 
