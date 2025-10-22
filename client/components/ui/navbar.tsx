@@ -61,7 +61,7 @@ const NavbarContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   
   @media (max-width: 768px) {
     flex-direction: column;

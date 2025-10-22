@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CTAButton } from './CTAButton';
 
 export const WhyTypid = () => {
   return (
@@ -13,14 +14,7 @@ export const WhyTypid = () => {
             entire workflow together: from event creation and Tycket sales to analytics, 
             vouchers, and booth design — everything runs seamlessly in one connected system.
           </WhyTypidDescription>
-          <WhyTypidButton>
-            <ButtonText>
-              <ButtonLabel>Launch Your Event Now</ButtonLabel>
-            </ButtonText>
-            <ButtonIcon>
-              <img src="/arrow-right.svg" alt="Arrow right" />
-            </ButtonIcon>
-          </WhyTypidButton>
+          <CTAButton label="Launch Your Event Now" />
         </WhyTypidContent>
       </WhyTypidHeader>
       

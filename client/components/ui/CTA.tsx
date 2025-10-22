@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CTAButton } from './CTAButton';
+
 
 export const CTA = () => {
   return (
@@ -10,9 +12,7 @@ export const CTA = () => {
             <CTATitle>Bring your events to life</CTATitle>
             <CTADescription>Everything you need to create, manage, and elevate your events.</CTADescription>
           </CTAContent>
-          <CTAButton>
-            <ButtonText>Get started</ButtonText>
-          </CTAButton>
+          <CTAButton label="Get Started" />
         </CTAColumn>
       </CTAContainer>
     </CTAWrapper>
@@ -100,43 +100,4 @@ const CTADescription = styled.p`
   @media (max-width: 768px) {
     font-size: 16px;
   }
-`;
-
-const CTAButton = styled.button`
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0.75rem 2rem;
-  gap: 0.5rem;
-  background-color: #063646;
-  border: 2px solid #063646;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  
-  &:hover {
-    background-color: #0a7a94;
-    border-color: #0a7a94;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(6, 54, 70, 0.3);
-  }
-  
-  &:active {
-    transform: translateY(0);
-  }
-  
-  @media (max-width: 768px) {
-    padding: 0.625rem 1.5rem;
-  }
-`;
-
-const ButtonText = styled.span`
-  text-align: left;
-  vertical-align: top;
-  font-size: 16px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  line-height: 24px;
-  color: #ffffff;
 `;

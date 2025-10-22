@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CTAButton } from './CTAButton';
 
 export const Hero = () => {
   return (
@@ -11,14 +12,7 @@ export const Hero = () => {
             <Subtitle>From setup to sales, Events by Typid gives you the power to create, manage, and customize every part of your event experience —  all in one dashboard.</Subtitle>
           </HeroContent>
           <HeroActions>
-            <HeroLink>
-              <LinkText>
-                <LinkTextContent>Sign up</LinkTextContent>
-              </LinkText>
-              <LinkIcon>
-                <img src="/arrow-right.svg" alt="Arrow right" />
-              </LinkIcon>
-            </HeroLink>
+            <CTAButton label="Sign up" />
           </HeroActions>
         </HeroColumn>
         <HeroFrame>
@@ -105,52 +99,7 @@ const HeroActions = styled.div`
   gap: 1rem;
 `;
 
-const HeroLink = styled.a`
-  border-radius: 0.75rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
-  background-color: #f8f9fb;
-  border: 0.125rem solid #0d0f1b;
-  cursor: pointer;
-  
-  &:hover {
-    background-color: #e8eaef;
-  }
-`;
-
-const LinkText = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-  padding: 0.5rem;
-`;
-
-const LinkTextContent = styled.span`
-  text-align: left;
-  vertical-align: middle;
-  font-size: 16px;
-  font-family: 'DM Sans', sans-serif;
-  line-height: 24px;
-  color: #0d0f1b;
-  font-weight: 500;
-`;
-
-const LinkIcon = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-start;
-  gap: 0.625rem;
-  
-  img {
-    height: 24px;
-    width: 24px;
-  }
-`;
+// CTA button styling moved to CTAButton.tsx
 
 const HeroFrame = styled.div`
   display: flex;
